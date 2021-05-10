@@ -1,8 +1,7 @@
-import { Auth } from '@aws-amplify/auth';
 import { API, withSSRContext } from 'aws-amplify';
 import { useState } from 'react';
-import { createUser, updateUser } from '../src/graphql/mutations';
-import { getUser } from '../src/graphql/queries';
+import { createUser, updateUser } from 'src/graphql/mutations';
+import { getUser } from 'src/graphql/queries';
 
 const Profile = ({ user = {}, mode, error }) => {
   const [profile, setProfile] = useState({
